@@ -1,0 +1,6 @@
+<%- @getBlock('scripts').toHTML() %>
+<script type="text/javascript">
+(function(w,d,s){
+  function l(e){e=d.createElement('script');e.src=s;d.body.appendChild(e);}
+  if(w.addEventListener){w.addEventListener('load',l,false);}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.onload=l;};
+})(window,document,'<%= @getRelativeUrl('scripts/app.js') %>');</script>

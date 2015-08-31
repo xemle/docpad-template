@@ -1,0 +1,27 @@
+<nav class="navbar navbar-default navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="<%= @getRelativeUrl('index.html') %>">DocPad Template</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav">
+        <% for page in @getCollection("pages").toJSON(): %>
+          <% if @document.id == page.id: %>
+            <li class="active"><a href="<%= @getRelativeUrl(page) %>"><%= page.navTitle %></a></li>
+          <% else: %>
+            <li><a href="<%= @getRelativeUrl(page) %>"><%= page.meta.navTitle %></a></li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

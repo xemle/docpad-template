@@ -1,0 +1,12 @@
+---
+title: "Docpad Template"
+navTitle: "Home"
+description: "Docpad Template with bootstrap, fontawesome and opensans"
+---
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>DocPad Template<small>Bundled with Bootstrap, FontAwesome, and OpenSans</small></h1>
+    </div>
+  </div>
+</div>
